@@ -10,7 +10,7 @@
   <meta property="og:title" content="🦖 ClawBio — Bioinformatics AI Agent Skills">
   <meta property="og:description" content="ClawBio is the first bioinformatics-native AI agent skill library. Run GWAS, phylogenetics, proteomics and more — local-first, privacy-focused, and fully reproducible. Built on OpenClaw.">
   <meta property="og:image" content="https://raw.githubusercontent.com/ClawBio/ClawBio/main/img/clawbio-social-preview.png">
-  <meta property="og:url" content="https://clawbio.github.io">
+  <meta property="og:url" content="https://clawbio.ai">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@manuelcorpas">
   <meta name="twitter:title" content="🦖 ClawBio — Bioinformatics AI Agent Skills">
@@ -78,6 +78,14 @@
     .feature-icon { font-size: 2rem; margin-bottom: 1rem; }
     .feature-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.5rem; }
     .feature-desc { color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; }
+    .showcase-card { display: grid; grid-template-columns: 120px 1fr; gap: 2rem; align-items: center; background: var(--bg2); border: 1px solid var(--border); border-radius: 14px; padding: 2rem; max-width: 800px; margin: 0 auto; }
+    .showcase-avatar { width: 120px; height: 120px; border-radius: 50%; border: 3px solid var(--accent); object-fit: cover; }
+    .showcase-name { font-weight: 700; font-size: 1.15rem; margin-bottom: 0.3rem; }
+    .showcase-role { color: var(--accent); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.6rem; }
+    .showcase-desc { color: var(--text-muted); font-size: 0.95rem; line-height: 1.6; }
+    .showcase-skills { display: flex; gap: 0.5rem; flex-wrap: wrap; margin-top: 0.8rem; }
+    .showcase-skill { background: rgba(63,185,80,0.12); border: 1px solid rgba(63,185,80,0.3); color: var(--accent); font-size: 0.75rem; font-weight: 600; padding: 0.2rem 0.6rem; border-radius: 999px; }
+    @media (max-width: 600px) { .showcase-card { grid-template-columns: 1fr; text-align: center; justify-items: center; } }
     .community-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
     .community-card { background: var(--bg2); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem; }
     .cta-section { text-align: center; background: radial-gradient(ellipse 80% 60% at 50% 110%, rgba(63,185,80,0.1) 0%, transparent 70%); border-top: 1px solid var(--border); }
@@ -95,6 +103,7 @@
     <ul class="nav-links">
       <li><a href="#skills">Skills</a></li>
       <li><a href="#why">Why ClawBio</a></li>
+      <li><a href="#showcase">Showcase</a></li>
       <li><a href="#community">Community</a></li>
       <li><a href="https://github.com/ClawBio/ClawBio" target="_blank">GitHub</a></li>
     </ul>
@@ -177,7 +186,7 @@
   <section id="skills" style="background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);">
     <div class="section-inner">
       <div class="section-label">Skills Library</div>
-      <div class="section-title">7 skills — live now</div>
+      <div class="section-title">8 skills — live now</div>
       <p class="section-sub">Each skill includes demo data so you can try it immediately without your own files.</p>
       <div class="skills-grid">
         <div class="skill-card"><div><div class="skill-name">🧭 Bio Orchestrator</div><div class="skill-desc">Routes bioinformatics requests to the right specialist skill by file type and keywords.</div></div><span class="skill-badge badge-mvp">MVP</span></div>
@@ -187,9 +196,33 @@
         <div class="skill-card"><div><div class="skill-name">⚖️ Equity Scorer</div><div class="skill-desc">HEIM diversity metrics from VCF/ancestry data. Heterozygosity, FST, PCA, and composite equity scores.</div></div><span class="skill-badge badge-mvp">MVP</span></div>
         <div class="skill-card"><div><div class="skill-name">🥗 NutriGx Advisor</div><div class="skill-desc">Nutrigenomics report: 40 SNPs, 13 nutrient domains, personalised dietary recommendations. Community-contributed.</div></div><span class="skill-badge badge-mvp">MVP</span></div>
         <div class="skill-card"><div><div class="skill-name">🧬 Metagenomics Profiler</div><div class="skill-desc">Microbial community profiling with Kraken2/Bracken. Alpha diversity, taxonomic composition, abundance plots.</div></div><span class="skill-badge badge-mvp">MVP</span></div>
+        <div class="skill-card"><div><div class="skill-name">🧬 Genome Compare</div><div class="skill-desc">Compare two genotypes: IBS relatedness score, ancestry estimation, and population-level context from 23andMe data.</div></div><span class="skill-badge badge-mvp">MVP</span></div>
         <div class="skill-card"><div><div class="skill-name">🧬 VCF Annotator</div><div class="skill-desc">Variant annotation with VEP, ClinVar, gnomAD + ancestry context.</div></div><span class="skill-badge badge-planned">Planned</span></div>
         <div class="skill-card"><div><div class="skill-name">📄 Lit Synthesizer</div><div class="skill-desc">PubMed/bioRxiv search with LLM summarisation and citation graphs.</div></div><span class="skill-badge badge-planned">Planned</span></div>
         <div class="skill-card"><div><div class="skill-name">🔬 scRNA Orchestrator</div><div class="skill-desc">Scanpy automation: QC, clustering, DE analysis, visualisation.</div></div><span class="skill-badge badge-planned">Planned</span></div>
+      </div>
+    </div>
+  </section>
+  <section id="showcase">
+    <div class="section-inner">
+      <div class="section-label">In Production</div>
+      <div class="section-title">ClawBio skills, running in conversation</div>
+      <p class="section-sub">ClawBio skills aren't just CLI tools — they power live AI agents that talk to real users every day.</p>
+      <div class="showcase-card">
+        <img class="showcase-avatar" src="roboterri-avatar.png" alt="RoboTerri avatar">
+        <div>
+          <div class="showcase-name">RoboTerri</div>
+          <div class="showcase-role">Telegram AI Agent</div>
+          <div class="showcase-desc">A bioinformatics intelligence agent on Telegram that runs ClawBio skills in conversation. Send your 23andMe file, get a pharmacogenomics report back. Snap a photo of your medication, get personalised dosage guidance. All local-first, all reproducible.</div>
+          <div class="showcase-skills">
+            <span class="showcase-skill">PharmGx Reporter</span>
+            <span class="showcase-skill">NutriGx Advisor</span>
+            <span class="showcase-skill">Genome Compare</span>
+            <span class="showcase-skill">Equity Scorer</span>
+            <span class="showcase-skill">Drug Photo Lookup</span>
+            <span class="showcase-skill">Metagenomics</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
