@@ -247,14 +247,15 @@
   <section class="cta-section">
     <div class="section-inner">
       <h2>Get started in 30 seconds</h2>
-      <p>Install a skill, run with natural language or directly — every skill includes demo data.</p>
+      <p>Clone, install, run — every skill includes demo data.</p>
       <div style="background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:1.5rem;font-family:monospace;font-size:0.9rem;text-align:left;max-width:540px;margin:0 auto 2rem;line-height:2;">
-        <span style="color:#8b949e"># Install a skill</span><br>
-        <span style="color:var(--accent2)">openclaw install skills/pharmgx-reporter</span><br><br>
-        <span style="color:#8b949e"># Run with natural language</span><br>
-        <span style="color:var(--accent2)">openclaw "Profile my pharmacogenes"</span><br><br>
-        <span style="color:#8b949e"># Or run directly</span><br>
-        <span style="color:var(--accent2)">python pharmgx_reporter.py --input demo --output report</span>
+        <span style="color:#8b949e"># Clone and install</span><br>
+        <span style="color:var(--accent2)">git clone https://github.com/ClawBio/ClawBio.git && cd ClawBio</span><br>
+        <span style="color:var(--accent2)">pip install -r requirements.txt</span><br><br>
+        <span style="color:#8b949e"># Run a skill with demo data</span><br>
+        <span style="color:var(--accent2)">python clawbio.py run pharmgx --demo</span><br><br>
+        <span style="color:#8b949e"># Or run with your own data</span><br>
+        <span style="color:var(--accent2)">python clawbio.py run pharmgx --input my_23andme.txt</span>
       </div>
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://github.com/ClawBio/ClawBio" target="_blank">⭐ Star on GitHub</a>
